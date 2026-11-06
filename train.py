@@ -1,0 +1,200 @@
+#================================
+#|     Luke Bain                |
+#|     Undergraduate Thesis     |
+#|     November 2026            |
+#================================
+import numpy as np
+import random
+
+geom_min = np.zeros(44)
+geom_max = np.zeros(44)
+
+fwng_xpos0_min	=	-15
+fwng_zpos0_min	=	-1
+fwng_chrd0_min	=	0.6
+fwng_inci0_min	=	-5
+fwng_span0_min	=	0.5
+fwng_dihe0_min	=	-5
+fwng_swep0_min	=	-10
+fwng_chrd1_min	=	0.6
+fwng_inci1_min	=	-5
+fwng_span1_min	=	0.5
+fwng_dihe1_min	=	-10
+fwng_swep1_min	=	-20
+fwng_chrd2_min	=	0.6
+fwng_inci2_min	=	-5
+fwng_span2_min	=	0.1
+fwng_dihe2_min	=	-80
+fwng_swep2_min	=	-20
+fwng_chrd3_min	=	0.1
+fwng_inci3_min	=	-10
+rwng_xpos0_min	=	1
+rwng_zpos0_min	=	0
+rwng_chrd0_min	=	0.6
+rwng_inci0_min	=	-5
+rwng_span0_min	=	0.5
+rwng_dihe0_min	=	-5
+rwng_swep0_min	=	-10
+rwng_chrd1_min	=	0.6
+rwng_inci1_min	=	-5
+rwng_span1_min	=	0.5
+rwng_dihe1_min	=	-10
+rwng_swep1_min	=	-20
+rwng_chrd2_min	=	0.6
+rwng_inci2_min	=	-5
+rwng_span2_min	=	0.1
+rwng_dihe2_min	=	-80
+rwng_swep2_min	=	-20
+rwng_chrd3_min	=	0.1
+rwng_inci3_min	=	-10
+tail_xpos_min	=	0
+tail_zpos_min	=	-2#0.5
+tail_span_min	=	2
+tail_chrd0_min	=	1.5
+tail_chrd1_min	=	0.5
+tail_swep_min	=	0
+
+fwng_xpos0_max	=	0
+fwng_zpos0_max	=	0.5
+fwng_chrd0_max	=	5
+fwng_inci0_max	=	5
+fwng_span0_max	=	15
+fwng_dihe0_max	=	5
+fwng_swep0_max	=	20
+fwng_chrd1_max	=	4
+fwng_inci1_max	=	5
+fwng_span1_max	=	15
+fwng_dihe1_max	=	10
+fwng_swep1_max	=	20
+fwng_chrd2_max	=	3
+fwng_inci2_max	=	5
+fwng_span2_max	=	10
+fwng_dihe2_max	=	80
+fwng_swep2_max	=	20
+fwng_chrd3_max	=	3
+fwng_inci3_max	=	10
+rwng_xpos0_max	=	1.1
+rwng_zpos0_max	=	1
+rwng_chrd0_max	=	5
+rwng_inci0_max	=	5
+rwng_span0_max	=	15
+rwng_dihe0_max	=	5
+rwng_swep0_max	=	20
+rwng_chrd1_max	=	4
+rwng_inci1_max	=	5
+rwng_span1_max	=	15
+rwng_dihe1_max	=	10
+rwng_swep1_max	=	20
+rwng_chrd2_max	=	3
+rwng_inci2_max	=	5
+rwng_span2_max	=	10
+rwng_dihe2_max	=	80
+rwng_swep2_max	=	20
+rwng_chrd3_max	=	3
+rwng_inci3_max	=	10
+tail_xpos_max	=	15
+tail_zpos_max	=	1.5
+tail_span_max	=	5
+tail_chrd0_max	=	3
+tail_chrd1_max	=	2
+tail_swep_max	=	30
+
+geom_min	[	0	]	=	fwng_xpos0_min
+geom_min	[	1	]	=	fwng_zpos0_min
+geom_min	[	2	]	=	fwng_chrd0_min
+geom_min	[	3	]	=	fwng_inci0_min
+geom_min	[	4	]	=	fwng_span0_min
+geom_min	[	5	]	=	fwng_dihe0_min
+geom_min	[	6	]	=	fwng_swep0_min
+geom_min	[	7	]	=	fwng_chrd1_min
+geom_min	[	8	]	=	fwng_inci1_min
+geom_min	[	9	]	=	fwng_span1_min
+geom_min	[	10	]	=	fwng_dihe1_min
+geom_min	[	11	]	=	fwng_swep1_min
+geom_min	[	12	]	=	fwng_chrd2_min
+geom_min	[	13	]	=	fwng_inci2_min
+geom_min	[	14	]	=	fwng_span2_min
+geom_min	[	15	]	=	fwng_dihe2_min
+geom_min	[	16	]	=	fwng_swep2_min
+geom_min	[	17	]	=	fwng_chrd3_min
+geom_min	[	18	]	=	fwng_inci3_min
+geom_min	[	19	]	=	rwng_xpos0_min
+geom_min	[	20	]	=	rwng_zpos0_min
+geom_min	[	21	]	=	rwng_chrd0_min
+geom_min	[	22	]	=	rwng_inci0_min
+geom_min	[	23	]	=	rwng_span0_min
+geom_min	[	24	]	=	rwng_dihe0_min
+geom_min	[	25	]	=	rwng_swep0_min
+geom_min	[	26	]	=	rwng_chrd1_min
+geom_min	[	27	]	=	rwng_inci1_min
+geom_min	[	28	]	=	rwng_span1_min
+geom_min	[	29	]	=	rwng_dihe1_min
+geom_min	[	30	]	=	rwng_swep1_min
+geom_min	[	31	]	=	rwng_chrd2_min
+geom_min	[	32	]	=	rwng_inci2_min
+geom_min	[	33	]	=	rwng_span2_min
+geom_min	[	34	]	=	rwng_dihe2_min
+geom_min	[	35	]	=	rwng_swep2_min
+geom_min	[	36	]	=	rwng_chrd3_min
+geom_min	[	37	]	=	rwng_inci3_min
+geom_min	[	38	]	=	tail_xpos_min
+geom_min	[	39	]	=	tail_zpos_min
+geom_min	[	40	]	=	tail_span_min
+geom_min	[	41	]	=	tail_chrd0_min
+geom_min	[	42	]	=	tail_chrd1_min
+geom_min	[	43	]	=	tail_swep_min
+
+geom_max	[	0	]	=	fwng_xpos0_max
+geom_max	[	1	]	=	fwng_zpos0_max
+geom_max	[	2	]	=	fwng_chrd0_max
+geom_max	[	3	]	=	fwng_inci0_max
+geom_max	[	4	]	=	fwng_span0_max
+geom_max	[	5	]	=	fwng_dihe0_max
+geom_max	[	6	]	=	fwng_swep0_max
+geom_max	[	7	]	=	fwng_chrd1_max
+geom_max	[	8	]	=	fwng_inci1_max
+geom_max	[	9	]	=	fwng_span1_max
+geom_max	[	10	]	=	fwng_dihe1_max
+geom_max	[	11	]	=	fwng_swep1_max
+geom_max	[	12	]	=	fwng_chrd2_max
+geom_max	[	13	]	=	fwng_inci2_max
+geom_max	[	14	]	=	fwng_span2_max
+geom_max	[	15	]	=	fwng_dihe2_max
+geom_max	[	16	]	=	fwng_swep2_max
+geom_max	[	17	]	=	fwng_chrd3_max
+geom_max	[	18	]	=	fwng_inci3_max
+geom_max	[	19	]	=	rwng_xpos0_max
+geom_max	[	20	]	=	rwng_zpos0_max
+geom_max	[	21	]	=	rwng_chrd0_max
+geom_max	[	22	]	=	rwng_inci0_max
+geom_max	[	23	]	=	rwng_span0_max
+geom_max	[	24	]	=	rwng_dihe0_max
+geom_max	[	25	]	=	rwng_swep0_max
+geom_max	[	26	]	=	rwng_chrd1_max
+geom_max	[	27	]	=	rwng_inci1_max
+geom_max	[	28	]	=	rwng_span1_max
+geom_max	[	29	]	=	rwng_dihe1_max
+geom_max	[	30	]	=	rwng_swep1_max
+geom_max	[	31	]	=	rwng_chrd2_max
+geom_max	[	32	]	=	rwng_inci2_max
+geom_max	[	33	]	=	rwng_span2_max
+geom_max	[	34	]	=	rwng_dihe2_max
+geom_max	[	35	]	=	rwng_swep2_max
+geom_max	[	36	]	=	rwng_chrd3_max
+geom_max	[	37	]	=	rwng_inci3_max
+geom_max	[	38	]	=	tail_xpos_max
+geom_max	[	39	]	=	tail_zpos_max
+geom_max	[	40	]	=	tail_span_max
+geom_max	[	41	]	=	tail_chrd0_max
+geom_max	[	42	]	=	tail_chrd1_max
+geom_max	[	43	]	=	tail_swep_max
+
+np.savetxt("input_minimums",geom_min,delimiter=",")
+np.savetxt("input_maximums",geom_max,delimiter=",")
+x = 0
+
+#================================
+#|     Luke Bain                |
+#|     Undergraduate Thesis     |
+#|     November 2026            |
+#================================
